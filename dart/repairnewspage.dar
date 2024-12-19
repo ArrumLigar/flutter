@@ -1,0 +1,80 @@
+import 'package:flutter/material.dart';
+
+class Newspage extends StatelessWidget {
+  const Newspage({Key? key}) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        title: Text('Bottom Navigation Demo'),
+      ),
+      body: SingleChildScrollView( 
+        child: Padding(
+          padding: const EdgeInsets.all(16.0),
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start, 
+            children: <Widget>[
+              Text(
+                'Post List',
+                style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
+              ),
+              SizedBox(height: 10),
+              Text(
+                'sunt aut facere repellat provident occaecati excepturi optio reprehenderit '
+                'quia et suscipit\n'
+                'suscipit recusandae consequuntur expedita et cum '
+                'reprehenderit molestiae ut ut quas totam\n'
+                'nostrum rerum est autem sunt rem eveniet architecto',
+              ),
+              SizedBox(height: 20),
+              Text(
+                'qui est esse\n'
+                'est rerum tempore vitae\n'
+                'sequi sint nihil reprehenderit dolor beatae ea dolores neque '
+                'fugiat blanditiis voluptate porro vel nihil molestiae ut reiciendis '
+                'qui aperiam non debitis possimus qui neque nisi nulla',
+              ),
+              SizedBox(height: 20),
+              Text(
+                'ea molestias quasi exercitationem repellat qui ipsa sit aut\n'
+                'et iusto sed quo iure\n'
+                'voluptatem occaecati omnis eligendi aut ad '
+                'molestiae porro eius odio et labore et velit aut\n'
+                'voluptatem doloribus vel accusantium quis pariatur',
+              ),
+              SizedBox(height: 20),
+              Text(
+                'eum et est occaecati\n'
+                'ullam et saepe reiciendis voluptatem adipisci '
+                'sit amet autem assumenda provident rerum culpa\n'
+                'quis hic commodi nesciunt rem tenetur doloremque ipsam iure '
+                'quis sunt voluptatem rerum illo velit',
+              ),
+              SizedBox(height: 20),
+              Text(
+                'nesciunt quas odio',
+              ),
+            ],
+          ),
+        ),
+      ),
+      bottomNavigationBar: BottomNavigationBar(
+        items: const <BottomNavigationBarItem>[
+          BottomNavigationBarItem(
+            icon: Icon(Icons.home),
+            label: 'Home',
+          ),
+          BottomNavigationBarItem(
+            icon: Icon(Icons.grid_view),
+            label: 'GridView',
+          ),
+          BottomNavigationBarItem(
+            icon: Icon(Icons.list),
+            label: 'ListView',
+          ),
+        ],
+      ),
+    );
+  }
+}
